@@ -173,10 +173,6 @@ const MUTATIONS = [
   {
     "name": "Disco",
     "pct": 200
-  },
-  {
-    "name": "Giant",
-    "pct": 300
   }
 ];
 
