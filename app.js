@@ -176,7 +176,7 @@ const MUTATIONS = [
   },
   {
     "name": "Giant",
-    "pct": 300
+    "pct": 200
   }
 ];
 
