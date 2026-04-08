@@ -237,6 +237,13 @@ function formatNumber(num) {
   });
 }
 
+function formatCompact(num) {
+  if (num >= 1e12) return (num / 1e12).toFixed(2).replace(/\.00$/, '') + 'T';
+  if (num >= 1e9)  return (num / 1e9).toFixed(2).replace(/\.00$/, '') + 'B';
+  if (num >= 1e6)  return (num / 1e6).toFixed(2).replace(/\.00$/, '') + 'M';
+
+  return num.toLocaleString();
+}
 function formatCurrencyCompact(num) {
   // UI-only formatting for base stat display
   return '$' + formatNumber(num);
@@ -543,7 +550,7 @@ function updateResultUI(calc) {
   }
 
   // Display
-  finalStatEl.textContent = '$' + formatNumber(calc.finalStat);
+  finalStatEl.textContent = '$' + formatCompact(calc.finalStat);
   // Ensure the value fits inside its card (large numbers on narrow screens)
   fitTextToContainer(finalStatEl, { min: 18, max: 40, step: 1 });
   finalStatSubEl.textContent = '/ Fish';
