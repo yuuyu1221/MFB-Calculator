@@ -99,6 +99,7 @@ const brainrotDB = {
     "mr chip": 2000000000,
     "los tralalerito": 2500000000,
     "money pug": 3000000000,
+    "trippi troppi troppa trippa": 4000000000,
     "tralalelodon": 55000000,
     "orcadon": 58500000,
     "blingo tentacolo": 62500000,
